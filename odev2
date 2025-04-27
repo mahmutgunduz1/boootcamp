@@ -1,0 +1,47 @@
+// 1. Kenar sayısına göre iç açılar toplamı
+fun icAciToplami(kenarSayisi: Int): Int {
+    return (kenarSayisi - 2) * 180
+}
+
+// 2. Gün sayısına göre maaş hesabı
+fun maasHesapla(gunSayisi: Int): Int {
+    val toplamSaat = gunSayisi * 8
+    return if (toplamSaat <= 160) {
+        toplamSaat * 10
+    } else {
+        (160 * 10) + ((toplamSaat - 160) * 20)
+    }
+}
+
+// 3. Kota miktarına göre ücret hesaplama
+fun kotaUcreti(kotaGB: Int): Int {
+    return if (kotaGB <= 50) {
+        100
+    } else {
+        100 + (kotaGB - 50) * 4
+    }
+}
+
+// 4. Dereceyi Fahrenheit'a dönüştürme
+fun dereceToFahrenheit(celsius: Double): Double {
+    return celsius * 1.8 + 32
+}
+
+// 5. Dikdörtgenin çevresini hesaplama
+fun dikdortgenCevresi(kisaKenar: Int, uzunKenar: Int): Int {
+    return 2 * (kisaKenar + uzunKenar)
+}
+
+// 6. Sayının faktöriyelini hesaplama
+fun faktoriyel(sayi: Int): Int {
+    var carpim = 1
+    for (i in 1..sayi) {
+        carpim *= i
+    }
+    return carpim
+}
+
+// 7. Kelime içindeki 'a' harfi sayısını bulma
+fun aHarfiSayisi(kelime: String): Int {
+    return kelime.count { it == 'a' || it == 'A' }
+}
